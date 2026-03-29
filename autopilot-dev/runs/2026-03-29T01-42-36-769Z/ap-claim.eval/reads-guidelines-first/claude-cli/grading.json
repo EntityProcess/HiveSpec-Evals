@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ap-claim/SKILL.md",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+      "passed": true,
+      "evidence": "The agent explicitly states that repo guidelines were extracted and provides a summary of conventions found within the typical project management files (CLAUDE.md/AGENTS.md) before proposing further technical steps."
+    },
+    {
+      "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+      "passed": true,
+      "evidence": "The answer clearly identifies the required conventions: worktree location (../task-tracker.worktrees/<branch-name>), branch naming (<type>/<issue-number>-<short-desc>), and commit format (Conventional commits)."
+    },
+    {
+      "text": "[rubric-3] Does not start coding before reading guidelines",
+      "passed": true,
+      "evidence": "The agent identifies the guidelines and assesses the codebase state first. It concludes by asking for permission to proceed to the 'explore' phase rather than jumping directly into code modifications."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ap-claim",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ap-claim/SKILL.md",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+          "passed": true,
+          "evidence": "The agent explicitly states that repo guidelines were extracted and provides a summary of conventions found within the typical project management files (CLAUDE.md/AGENTS.md) before proposing further technical steps."
+        },
+        {
+          "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+          "passed": true,
+          "evidence": "The answer clearly identifies the required conventions: worktree location (../task-tracker.worktrees/<branch-name>), branch naming (<type>/<issue-number>-<short-desc>), and commit format (Conventional commits)."
+        },
+        {
+          "text": "[rubric-3] Does not start coding before reading guidelines",
+          "passed": true,
+          "evidence": "The agent identifies the guidelines and assesses the codebase state first. It concludes by asking for permission to proceed to the 'explore' phase rather than jumping directly into code modifications."
+        }
+      ]
+    }
+  ]
+}

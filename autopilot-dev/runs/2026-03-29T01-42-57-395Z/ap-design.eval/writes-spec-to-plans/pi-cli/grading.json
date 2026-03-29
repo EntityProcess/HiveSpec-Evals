@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Writes a design spec file",
+      "passed": true,
+      "evidence": "The agent created a comprehensive design spec file titled 'Design Spec: Priority Field for Tasks' in the file changes."
+    },
+    {
+      "text": "[rubric-2] File is saved to .agents/plans/ directory",
+      "passed": true,
+      "evidence": "The design spec is saved at the path `.agents/plans/2026-03-29-priority-field-design.md`, which is the correct directory."
+    },
+    {
+      "text": "[rubric-3] Spec includes concrete acceptance signals",
+      "passed": true,
+      "evidence": "The spec contains multiple 'Acceptance checks' sections that provide concrete signals for success (e.g., 'TypeScript compilation fails if a task is built without priority')."
+    },
+    {
+      "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+      "passed": true,
+      "evidence": "The document is complete and specific, identifying exact filenames, types, and logic without using placeholders or ambiguous 'to be determined' language."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Writes a design spec file",
+          "passed": true,
+          "evidence": "The agent created a comprehensive design spec file titled 'Design Spec: Priority Field for Tasks' in the file changes."
+        },
+        {
+          "text": "[rubric-2] File is saved to .agents/plans/ directory",
+          "passed": true,
+          "evidence": "The design spec is saved at the path `.agents/plans/2026-03-29-priority-field-design.md`, which is the correct directory."
+        },
+        {
+          "text": "[rubric-3] Spec includes concrete acceptance signals",
+          "passed": true,
+          "evidence": "The spec contains multiple 'Acceptance checks' sections that provide concrete signals for success (e.g., 'TypeScript compilation fails if a task is built without priority')."
+        },
+        {
+          "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+          "passed": true,
+          "evidence": "The document is complete and specific, identifying exact filenames, types, and logic without using placeholders or ambiguous 'to be determined' language."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 2,
+    "diff_summary": "diff --git a/.agents/plans/2026-03-29-priority-field-design.md b/.agents/plans/2026-03-29-priority-field-design.md\nnew file mode 100644\nindex 0000000..ce190dc\n--- /dev/null\n+++ b/.agents/plans/2026-03-29-priority-field-design.md\n@@ -0,0 +1,110 @@\n+# Design Spec: Priority Field for Tasks (Approach B — Dedicated Priority Abstraction)\n+\n+## Context\n+The task tracker currently infers an implicit priority via `derivePriority()` based solely on task status. Stakeholders need an explicit priority field that can be set independently of status, surfaced consistently across CLI and API interfaces, and extended with richer rules later. Approach B (introducing a dedicated abstraction) was selected to keep priority concerns decoupled from task status logic and to give us a single place to evolve priority handling.\n+\n+## Goals\n+- Allow users to set an explicit priority (`low`, `medium`, `high`) when creating tasks via CLI and API.\n+- Persist the priority on each task so it can be surfaced in listings and future features.\n+- Provide a reusable abstraction around priority values for validation, formatting, and future rule engines.\n+\n+## Non-Goals\n+- Custom priority schemas (e.g., `urgent`, numeric levels) — future work.\n+- Editing priority after creation — only creation-time assignment is required for this iteration.\n+- Persisted migrations — the in-memory store resets between runs.\n... (114 more lines)"
+  }
+}

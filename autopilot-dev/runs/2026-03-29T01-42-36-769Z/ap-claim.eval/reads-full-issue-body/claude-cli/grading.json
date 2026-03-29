@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Extracts the objective (add dueDate field)",
+      "passed": true,
+      "evidence": "The response explicitly states the objective is to 'Add an optional dueDate field to the Task interface'."
+    },
+    {
+      "text": "[rubric-2] Identifies acceptance signals (filter by due date, backward compatibility)",
+      "passed": true,
+      "evidence": "The response identifies both filtering by due date and backward compatibility for existing tasks as acceptance criteria."
+    },
+    {
+      "text": "[rubric-3] Identifies non-goals (no calendar UI, no recurring tasks)",
+      "passed": true,
+      "evidence": "The response correctly lists 'No calendar UI' and 'No recurring tasks' as non-goals."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Extracts the objective (add dueDate field)",
+          "passed": true,
+          "evidence": "The response explicitly states the objective is to 'Add an optional dueDate field to the Task interface'."
+        },
+        {
+          "text": "[rubric-2] Identifies acceptance signals (filter by due date, backward compatibility)",
+          "passed": true,
+          "evidence": "The response identifies both filtering by due date and backward compatibility for existing tasks as acceptance criteria."
+        },
+        {
+          "text": "[rubric-3] Identifies non-goals (no calendar UI, no recurring tasks)",
+          "passed": true,
+          "evidence": "The response correctly lists 'No calendar UI' and 'No recurring tasks' as non-goals."
+        }
+      ]
+    }
+  ]
+}

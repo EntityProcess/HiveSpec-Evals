@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ap-design/SKILL.md",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Does not start writing implementation code",
+      "passed": true,
+      "evidence": "The candidate does not provide any implementation code. It strictly provides a design-level response with scope assessment and clarifying questions."
+    },
+    {
+      "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+      "passed": true,
+      "evidence": "The candidate asks three specific clarifying questions (Q1, Q2, Q3) regarding assignment, the definition of 'custom rules', and defaults before proceeding with any implementation."
+    },
+    {
+      "text": "[rubric-3] Explains why design is needed before implementation",
+      "passed": true,
+      "evidence": "In the 'Scope Assessment' section, the candidate explains that a design phase is necessary because the feature touches multiple layers of the application (model, service, CLI, API, etc.), justifying the structured approach."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ap-design",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ap-design/SKILL.md",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Does not start writing implementation code",
+          "passed": true,
+          "evidence": "The candidate does not provide any implementation code. It strictly provides a design-level response with scope assessment and clarifying questions."
+        },
+        {
+          "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+          "passed": true,
+          "evidence": "The candidate asks three specific clarifying questions (Q1, Q2, Q3) regarding assignment, the definition of 'custom rules', and defaults before proceeding with any implementation."
+        },
+        {
+          "text": "[rubric-3] Explains why design is needed before implementation",
+          "passed": true,
+          "evidence": "In the 'Scope Assessment' section, the candidate explains that a design phase is necessary because the feature touches multiple layers of the application (model, service, CLI, API, etc.), justifying the structured approach."
+        }
+      ]
+    }
+  ]
+}

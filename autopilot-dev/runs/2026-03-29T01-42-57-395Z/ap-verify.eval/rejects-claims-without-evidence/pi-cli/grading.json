@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Does not accept the user's claim at face value",
+      "passed": true,
+      "evidence": "The assistant explicitly refuses to ship the work based only on the user's claim, stating it cannot proceed without running the required steps itself."
+    },
+    {
+      "text": "[rubric-2] Insists on running verification commands independently",
+      "passed": true,
+      "evidence": "The assistant insists on running the full verification sequence independently before moving to the ship phase."
+    },
+    {
+      "text": "[rubric-3] Explains that verification evidence must come from actual command output",
+      "passed": true,
+      "evidence": "The assistant mentions the necessity of 'capturing evidence' per the process, which implies that verification must come from actual command outputs/logs rather than just the user's verbal confirmation."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Does not accept the user's claim at face value",
+          "passed": true,
+          "evidence": "The assistant explicitly refuses to ship the work based only on the user's claim, stating it cannot proceed without running the required steps itself."
+        },
+        {
+          "text": "[rubric-2] Insists on running verification commands independently",
+          "passed": true,
+          "evidence": "The assistant insists on running the full verification sequence independently before moving to the ship phase."
+        },
+        {
+          "text": "[rubric-3] Explains that verification evidence must come from actual command output",
+          "passed": true,
+          "evidence": "The assistant mentions the necessity of 'capturing evidence' per the process, which implies that verification must come from actual command outputs/logs rather than just the user's verbal confirmation."
+        }
+      ]
+    }
+  ]
+}

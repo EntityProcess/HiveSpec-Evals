@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Includes a \"what exists\" section identifying current code",
+      "passed": true,
+      "evidence": "Section 1, 'What Exists Today', provides a detailed breakdown of current models, services, utilities, and entry points."
+    },
+    {
+      "text": "[rubric-2] Includes a \"what needs to change\" section",
+      "passed": true,
+      "evidence": "Section 2, 'What Needs to Change for Issue #50', identifies specific modifications needed in the schema, logic, and presentation layers."
+    },
+    {
+      "text": "[rubric-3] Lists all consumers of affected interfaces",
+      "passed": true,
+      "evidence": "Section 3, 'Consumers / Blast Radius', explicitly lists the CLI, API, and reports as consumers of the affected interfaces."
+    },
+    {
+      "text": "[rubric-4] Identifies risks (backward compatibility, multiple entry points)",
+      "passed": true,
+      "evidence": "Section 5, 'Risks / Considerations', discusses backward compatibility (API Contract Break) and the impact of changes across multiple shared entry points."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Includes a \"what exists\" section identifying current code",
+          "passed": true,
+          "evidence": "Section 1, 'What Exists Today', provides a detailed breakdown of current models, services, utilities, and entry points."
+        },
+        {
+          "text": "[rubric-2] Includes a \"what needs to change\" section",
+          "passed": true,
+          "evidence": "Section 2, 'What Needs to Change for Issue #50', identifies specific modifications needed in the schema, logic, and presentation layers."
+        },
+        {
+          "text": "[rubric-3] Lists all consumers of affected interfaces",
+          "passed": true,
+          "evidence": "Section 3, 'Consumers / Blast Radius', explicitly lists the CLI, API, and reports as consumers of the affected interfaces."
+        },
+        {
+          "text": "[rubric-4] Identifies risks (backward compatibility, multiple entry points)",
+          "passed": true,
+          "evidence": "Section 5, 'Risks / Considerations', discusses backward compatibility (API Contract Break) and the impact of changes across multiple shared entry points."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..76715d2\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,2 @@\n+Explore the codebase for issue #50: \"Add priority field to tasks with custom rules\".\n+Produce a structured exploration summary.\n\\ No newline at end of file"
+  }
+}

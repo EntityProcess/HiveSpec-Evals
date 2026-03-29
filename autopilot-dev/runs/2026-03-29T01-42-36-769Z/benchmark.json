@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "eval_file": "",
+    "timestamp": "2026-03-29T01:43:24.966Z",
+    "targets": [
+      "claude-cli"
+    ],
+    "tests_run": [
+      "assesses-scope",
+      "auto-merges-low-risk",
+      "checks-blast-radius",
+      "discovers-existing-implementation",
+      "final-blast-radius-check",
+      "finds-all-consumers",
+      "proposes-multiple-approaches",
+      "reads-full-issue-body",
+      "reads-guidelines-first",
+      "refuses-implementation-without-design",
+      "rejects-claims-without-evidence",
+      "requires-verification-before-shipping",
+      "risk-classification",
+      "runs-actual-verification",
+      "structured-summary",
+      "tests-all-execution-modes",
+      "writes-spec-to-plans"
+    ]
+  },
+  "run_summary": {
+    "claude-cli": {
+      "pass_rate": {
+        "mean": 0.235,
+        "stddev": 0.424
+      },
+      "time_seconds": {
+        "mean": 35.082,
+        "stddev": 25.83
+      },
+      "tokens": {
+        "mean": 70320.25,
+        "stddev": 30552.141
+      },
+      "cost_usd": {
+        "mean": 0.164,
+        "stddev": 0.04
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ap-claim:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "skill-trigger-ap-design:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": [
+    "13 test(s) had execution errors and are included in pass_rate as failures"
+  ]
+}

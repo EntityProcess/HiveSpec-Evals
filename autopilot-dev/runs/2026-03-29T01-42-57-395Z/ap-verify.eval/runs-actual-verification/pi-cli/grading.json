@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Skill \"ap-verify\" not found in 9 tool call(s)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+      "passed": true,
+      "evidence": "The agent clearly reports the results of running (or attempting to run) the build, test, and lint commands specified by the user."
+    },
+    {
+      "text": "[rubric-2] Shows command output as evidence of execution",
+      "passed": true,
+      "evidence": "While the agent provides a summary rather than a raw terminal log, it includes specific evidence from the execution, such as the exact error reason for Vitest (no test files), the exit code, and a detailed list of specific file paths that failed the Biome linting check. This level of detail serves as evidence of execution."
+    },
+    {
+      "text": "[rubric-3] Does not claim completion without showing verification output",
+      "passed": true,
+      "evidence": "The agent does not claim the task is complete. On the contrary, it correctly identifies that the verification failed and provides instructions on how to resolve the issues before a successful verification can be achieved."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ap-verify",
+      "type": "skill-trigger",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "Skill \"ap-verify\" not found in 9 tool call(s)",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+          "passed": true,
+          "evidence": "The agent clearly reports the results of running (or attempting to run) the build, test, and lint commands specified by the user."
+        },
+        {
+          "text": "[rubric-2] Shows command output as evidence of execution",
+          "passed": true,
+          "evidence": "While the agent provides a summary rather than a raw terminal log, it includes specific evidence from the execution, such as the exact error reason for Vitest (no test files), the exit code, and a detailed list of specific file paths that failed the Biome linting check. This level of detail serves as evidence of execution."
+        },
+        {
+          "text": "[rubric-3] Does not claim completion without showing verification output",
+          "passed": true,
+          "evidence": "The agent does not claim the task is complete. On the contrary, it correctly identifies that the verification failed and provides instructions on how to resolve the issues before a successful verification can be achieved."
+        }
+      ]
+    }
+  ]
+}
